@@ -1,0 +1,52 @@
+{
+  "revision_id": "15ead22d7b642b1437a7118a5dbd0ada316d67cbb54820373d3e3bd0c79d6b08",
+  "name": "lx-web",
+  "run_list": [
+    "recipe[lx-web::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "lx-web": {
+      "version": "0.1.0",
+      "identifier": "7571bbae66f2b9f93bf3dd100510ee36daf2b742",
+      "dotted_decimal_identifier": "33057623173952185.70153187772859664.261919368984386",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/sripadahannu/lx-web.git",
+        "revision": "7ab5de7bf1ff352fa69dee2fc7e9a44a0e62b89f",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/main",
+          "origin/main"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "lx-web",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "lx-web (0.1.0)": [
+
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 name 'lx-web'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Sripada H Rao'
+maintainer_email 'sripadas@outlook.com'
 license 'All Rights Reserved'
 description 'Installs/Configures lx-web'
 version '0.1.0'
