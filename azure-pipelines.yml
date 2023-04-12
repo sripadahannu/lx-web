@@ -1,0 +1,32 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+  fetchDepth: 1
+
+- script: |
+    git checkout master
+    git pull
+  displayName: 'Checkout and update master branch'
+
+- script: |
+    echo "Running tests..."
+    # Add commands to run tests here
+  displayName: 'Run tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    failTaskOnFailedTests: true
+  displayName: 'Publish test results'
+
+- task: GitHubTrigger@0
+  inputs:
+    repository: 'your-github-repo'
+    branch: 'master'
+  displayName: 'Trigger pipeline on merge to master'
